@@ -1,0 +1,40 @@
+{
+    "name": "colinodell/omnipay-zero",
+    "type": "library",
+    "description": "Zero-amount driver for the Omnipay payment processing library",
+    "keywords": [
+        "gateway",
+        "zero",
+        "free",
+        "merchant",
+        "omnipay",
+        "pay",
+        "payment"
+    ],
+    "homepage": "https://github.com/colinodell/omnipay-zero",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Colin O'Dell",
+            "email": "colinodell@gmail.com"
+        },
+        {
+            "name": "Contributors",
+            "homepage": "https://github.com/colinodell/omnipay-zero/contributors"
+        }
+    ],
+    "autoload": {
+        "psr-4": { "Omnipay\\Zero\\" : "src/" }
+    },
+    "require": {
+        "omnipay/common": "~2.0"
+    },
+    "require-dev": {
+        "omnipay/tests": "~2.0"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "2.0.x-dev"
+        }
+    }
+}
