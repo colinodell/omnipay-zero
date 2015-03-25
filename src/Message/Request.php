@@ -7,9 +7,16 @@ use Omnipay\Common\Message\AbstractRequest;
 
 /**
  * Zero Request
+ *
+ * @method Response send()
  */
 class Request extends AbstractRequest
 {
+    /**
+     * @return array
+     *
+     * @throws InvalidRequestException
+     */
     public function getData()
     {
         $this->validate('amount');
@@ -37,6 +44,11 @@ class Request extends AbstractRequest
         }
     }
 
+    /**
+     * @param mixed $data
+     *
+     * @return Response
+     */
     public function sendData($data)
     {
         return $this->response = new Response($this, $data);
