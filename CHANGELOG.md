@@ -6,6 +6,7 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 ### Added
 
  - Added support for purchase() method
+ - Added docblocks with return types for easier development
 
 ## 2.0.0
 ### Added
