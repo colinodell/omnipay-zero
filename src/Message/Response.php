@@ -9,6 +9,9 @@ use Omnipay\Common\Message\AbstractResponse;
  */
 class Response extends AbstractResponse
 {
+    /**
+     * @return bool
+     */
     public function isSuccessful()
     {
         return true;
