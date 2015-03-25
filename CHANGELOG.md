@@ -15,6 +15,6 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 
  - Initial release
 
-[Unreleased]: https://github.com/colinodell/omnipay-bundle/compare/v2.1.0...HEAD
-[2.1.0]: https://github.com/colinodell/omnipay-bundle/compare/v2.0.0...v2.1.0
+[Unreleased]: https://github.com/colinodell/omnipay-zero/compare/v2.1.0...HEAD
+[2.1.0]: https://github.com/colinodell/omnipay-zero/compare/v2.0.0...v2.1.0
 [2.0.0]: https://github.com/colinodell/omnipay-zero/releases/tag/v2.0.0
