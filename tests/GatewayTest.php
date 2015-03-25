@@ -37,6 +37,18 @@ class GatewayTest extends GatewayTestCase
         $this->assertNull($response->getMessage());
     }
 
+    public function testPurchaseZeroAmount()
+    {
+        $options = array('amount' => 0);
+        $response = $this->gateway->purchase($options)->send();
+
+        $this->assertInstanceOf('\Omnipay\Zero\Message\Response', $response);
+        $this->assertTrue($response->isSuccessful());
+        $this->assertFalse($response->isRedirect());
+        $this->assertNull($response->getTransactionReference());
+        $this->assertNull($response->getMessage());
+    }
+
     /**
      * @expectedException \Omnipay\Common\Exception\InvalidRequestException
      */
@@ -53,5 +65,14 @@ class GatewayTest extends GatewayTestCase
     {
         $options = array('amount' => 100);
         $response = $this->gateway->capture($options)->send();
+    }
+
+    /**
+     * @expectedException \Omnipay\Common\Exception\InvalidRequestException
+     */
+    public function testPurchaseNonZeroAmount()
+    {
+        $options = array('amount' => 100);
+        $response = $this->gateway->purchase($options)->send();
     }
 }
