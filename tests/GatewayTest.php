@@ -13,6 +13,11 @@ class GatewayTest extends GatewayTestCase
         $this->gateway = new Gateway($this->getHttpClient(), $this->getHttpRequest());
     }
 
+    public function testSupportsAuthorize()
+    {
+        $this->assertTrue($this->gateway->supportsAuthorize());
+    }
+
     public function testAuthorizeZeroAmount()
     {
         $options = array('amount' => 0);
@@ -25,6 +30,11 @@ class GatewayTest extends GatewayTestCase
         $this->assertNull($response->getMessage());
     }
 
+    public function testSupportsCapture()
+    {
+        $this->assertTrue($this->gateway->supportsCapture());
+    }
+
     public function testCaptureZeroAmount()
     {
         $options = array('amount' => 0);
@@ -35,6 +45,11 @@ class GatewayTest extends GatewayTestCase
         $this->assertFalse($response->isRedirect());
         $this->assertNull($response->getTransactionReference());
         $this->assertNull($response->getMessage());
+    }
+
+    public function testSupportsPurchase()
+    {
+        $this->assertTrue($this->gateway->supportsPurchase());
     }
 
     public function testPurchaseZeroAmount()
