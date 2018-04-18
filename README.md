@@ -7,25 +7,15 @@
 [![Total Downloads](https://poser.pugx.org/colinodell/omnipay-zero/d/total.png)](https://packagist.org/packages/colinodell/omnipay-zero)
 
 [Omnipay](https://github.com/thephpleague/omnipay) is a framework agnostic, multi-gateway payment
-processing library for PHP 5.3+. This package implements zero-amount support for Omnipay (for free orders).
+processing library for PHP. This package implements zero-amount support for Omnipay (for free orders).
 
 ## Installation
 
-This driver is installed via [Composer](http://getcomposer.org/). To install, simply add it
-to your `composer.json` file:
+This driver can be installed via [Composer](http://getcomposer.org/):
 
-```json
-{
-    "require": {
-        "colinodell/omnipay-zero": "~2.0"
-    }
-}
+```bash
+composer require colinodell/omnipay-zero
 ```
-
-And run composer to update your dependencies:
-
-    $ curl -s http://getcomposer.org/installer | php
-    $ php composer.phar update
 
 ## Basic Usage
 
