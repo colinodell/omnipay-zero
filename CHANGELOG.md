@@ -4,6 +4,10 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 
 ## [Unreleased]
 
+### Changed
+
+ - Depend on Omnipay 3.x instead of 2.x (no code changes)
+
 ## [2.1.0]
 ### Added
 
